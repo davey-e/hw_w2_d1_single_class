@@ -45,5 +45,18 @@ class TestLibrary < MiniTest::Test
     assert_equal(expected, actual)
   end
 
+  def test_list_single_book_info
+    expected = {
+      title: "game_of_thrones",
+      rental_details: {
+        student_name: "Dave",
+        date: "30/12/17"
+      }
+    }
+    actual = @library.list_single_book_info("game_of_thrones")
+    assert_equal(expected, actual)
+  end
+
+
 
 end
