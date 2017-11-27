@@ -48,4 +48,22 @@ class TestTeam < MiniTest::Test
     @team = Team.new("Scotland", ["John","Dave","Giuseppe"], "Alex")
   end
   #Part B
+
+  def test_team_name
+    expected = "Scotland"
+    actual = @team.team_name()
+    assert_equal(expected, actual)
+  end
+
+  def test_players
+    expected = ["John","Dave","Giuseppe"]
+    actual = @team.players()
+    assert_equal(expected, actual)
+  end
+
+  def test_coach
+    expected = "Alex"
+    actual = @team.coach_name()
+    assert_equal(expected, actual)
+  end
 end
