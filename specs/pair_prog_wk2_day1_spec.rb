@@ -8,6 +8,18 @@ class TestStudent < MiniTest::Test
     @student = Student.new("John", 18)
   end
 
+  #Part A
 
+  def test_student_name
+    expected = "John"
+    actual = @student.student_name()
+    assert_equal(expected, actual)
+  end
+
+  def test_cohort
+    expected = 18
+    actual = @student.cohort()
+    assert_equal(expected, actual)
+  end
 
 end
