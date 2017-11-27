@@ -64,4 +64,12 @@ class Team
     @players.push(player_name)
   end
 
+  def player_is_in_team(player_name)
+    if @players.include?(player_name)
+      return true
+    else
+      return false
+    end
+  end
+
 end

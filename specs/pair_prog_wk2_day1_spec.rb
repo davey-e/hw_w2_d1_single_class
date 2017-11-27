@@ -78,4 +78,10 @@ class TestTeam < MiniTest::Test
     actual = @team.players()
     assert_equal(expected, actual)
   end
+
+  def test_player_is_in_team
+    actual = @team.player_is_in_team("Dave")
+    expected = true
+    assert_equal(expected, actual)
+  end
 end
