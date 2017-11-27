@@ -41,3 +41,11 @@ class TestStudent < MiniTest::Test
   end
 
 end
+
+class TestTeam < MiniTest::Test
+
+  def setup
+    @team = Team.new("Scotland", ["John","Dave","Giuseppe"], "Alex")
+  end
+  #Part B
+end
