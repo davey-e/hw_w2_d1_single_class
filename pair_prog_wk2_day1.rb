@@ -60,4 +60,8 @@ class Team
     @coach_name = coach_name
   end
 
+  def add_player(player_name)
+    @players.push(player_name)
+  end
+
 end

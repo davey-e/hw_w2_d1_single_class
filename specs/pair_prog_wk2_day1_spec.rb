@@ -71,4 +71,11 @@ class TestTeam < MiniTest::Test
     @team.coach_name = "Craig"
     assert_equal("Craig", @team.coach_name)
   end
+
+  def test_add_new_player
+    @team.add_player("Robert")
+    expected = ["John","Dave","Giuseppe","Robert"]
+    actual = @team.players()
+    assert_equal(expected, actual)
+  end
 end
