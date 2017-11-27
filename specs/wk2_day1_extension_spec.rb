@@ -37,7 +37,13 @@ class TestLibrary < MiniTest::Test
     expected = @books
     actual = @library.books
     assert_equal(expected, actual)
-
   end
+
+  def test_list_all_books
+    expected = @books
+    actual = @library.list_all_books()
+    assert_equal(expected, actual)
+  end
+
 
 end
