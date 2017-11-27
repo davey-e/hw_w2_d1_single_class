@@ -17,5 +17,11 @@ class Library
     return nil
   end
 
+  def list_single_book_rental_info(book_title)
+    for book in @books
+      return book[:rental_details] if book[:title] == book_title
+    end
+    return nil
+  end
 
 end
