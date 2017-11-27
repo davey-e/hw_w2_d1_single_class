@@ -45,7 +45,7 @@ end
 class TestTeam < MiniTest::Test
 
   def setup
-    @team = Team.new("Scotland", ["John","Dave","Giuseppe"], "Alex")
+    @team = Team.new("Scotland", ["John","Dave","Giuseppe"], "Alex", 0)
   end
   #Part B
 
@@ -84,4 +84,17 @@ class TestTeam < MiniTest::Test
     expected = true
     assert_equal(expected, actual)
   end
+
+  def test_points
+    expected = 0
+    actual = @team.points()
+    assert_equal(expected, actual)
+  end
+
+  def test_set_points
+    @team.points = 10
+    assert_equal(10, @team.points)
+  end
+
+
 end
