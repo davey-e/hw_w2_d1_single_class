@@ -27,13 +27,25 @@ class Library
   def add_new_book(book_title)
     @books.push(
       {
-      title: "harry_potter",
-          rental_details: {
-            student_name: "",
-            date: ""
-          }
+        title: book_title,
+        rental_details: {
+          student_name: "",
+          date: ""
         }
-      )
+      }
+    )
+  end
+
+  def update_rental_details(book_title, student_name, date)
+    new_rental_details = {
+      student_name: student_name,
+      date: date
+    }
+    for book in @books
+      if book[:title] == book_title
+        book[:rental_details].update(new_rental_details)
+      end
+    end
   end
 
 end
