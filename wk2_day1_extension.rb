@@ -24,4 +24,16 @@ class Library
     return nil
   end
 
+  def add_new_book(book_title)
+    @books.push(
+      {
+      title: "harry_potter",
+          rental_details: {
+            student_name: "",
+            date: ""
+          }
+        }
+      )
+  end
+
 end
