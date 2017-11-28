@@ -4,6 +4,9 @@ class Library
 
   def initialize(books)
     @books = books
+    #@books = books || []
+    #This allows an empty array in case nothing is
+    #passed in when creating a new instance of books
   end
 
   def list_all_books()
@@ -46,6 +49,8 @@ class Library
         book[:rental_details].update(new_rental_details)
       end
     end
+    #The above for and if lines can be replaced with
+    #list_single_book_info(book_title)
   end
 
 end

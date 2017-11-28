@@ -77,6 +77,7 @@ class TestLibrary < MiniTest::Test
     }
     actual = @library.list_single_book_info("harry_potter")
     assert_equal(expected, actual)
+    #Good idea to also check that the number of items in the array has increased
   end
 
   def test_update_rental_details

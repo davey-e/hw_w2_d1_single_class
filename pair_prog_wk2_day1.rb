@@ -3,6 +3,9 @@ class Student
   def initialize(student_name, cohort)
     @student_name = student_name
     @cohort = cohort
+    #@cohort = cohort.to_i()
+    #This is a better way to define cohort
+    #in case a number as a string is passed in
   end
 
 
@@ -71,6 +74,8 @@ class Team
     else
       return false
     end
+    #return @players.include?(player_name)
+    #This is better than if else (single line instead of 5)
   end
 
   def update_points(game_result)
